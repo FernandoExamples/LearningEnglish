@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ligthPrimary"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Score"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/finish" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_marginBottom="2dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/color1"
+                    android:text="button1" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:background="@color/color2"
+                    android:text="button2" />
+            </TableRow>
+
+            <TableRow
+                android:layout_marginBottom="2dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/color3"
+                    android:text="button3" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:background="@color/color4"
+                    android:text="button4" />
+            </TableRow>
+
+            <TableRow android:gravity="center">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/color5"
+                    android:text="button5" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:background="@color/color6"
+                    android:text="button6" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayout"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Correct!"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#00c20a"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorPrimary"
+            android:text="Start"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Body"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/radioAnimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Animals" />
+
+            <RadioButton
+                android:id="@+id/radioFruits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fruits" />
+
+            <RadioButton
+                android:id="@+id/radioSport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport" />
+        </RadioGroup>
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/seekTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:max="180"
+            android:min="30"
+            android:tooltipText="Time" />
+
+        <TextView
+            android:id="@+id/textViewProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Max Time: 30" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/estudiantes" />
+    </LinearLayout>
+
+</FrameLayout>
